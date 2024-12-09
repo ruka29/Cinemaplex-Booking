@@ -1,0 +1,119 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "lucida sans unicode", "lucida grande", sans-serif;
+    overflow-x: hidden;
+    background-color: #242333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.confirm-form {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background-color: #333;
+    padding: 10px 30px 30px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #333;
+}
+
+.confirm-form div{
+    display: flex;
+}
+
+h2{
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+h1{
+    color: #fff;
+}
+
+.confirm-form label {
+    font-size: 17px;
+    color: #fff;
+    align-items: center;
+    width: 50%;
+    margin-top: 6px;
+}
+
+.confirm-form input[type="text"],
+.confirm-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0 0px 20px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #000;
+    background-color: #cacaca;
+}
+
+#8{
+    justify-content: right;
+    width: 100%;
+}
+
+.confirm-form button {
+    background-color: rgba(24, 255, 55, 1);
+    position: relative;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-left: 75%;
+    font-size: 18px;
+    /* letter-spacing: 1px; */
+    cursor: pointer;
+}
+
+.confirm-form button:hover {
+    background-color: rgba(24, 255, 55, 0.6);
+    transition: all 0.3s ease 0s;
+}
+
+p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.btn button {
+    background-color: rgba(24, 255, 55, 1);
+    width: 100%;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    background-color: rgba(24, 255, 55, 0.6);
+    transition: all 0.3s ease 0s;
+}
+
+#home-link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 2rem;
+    margin-top: 15px;
+}
+
+#home-link:hover{
+    text-decoration: underline;
+}

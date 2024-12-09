@@ -1,0 +1,85 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "lucida sans unicode", "lucida grande", sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background-color: #242333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: #333;
+    padding: 30px 30px 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #333;
+}
+
+.login-form h1 {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 0 0 25px 0;
+}
+
+.login-form label {
+    font-size: 15px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+    
+    padding: 10px;
+    margin: 0 0px 20px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.login-form button {
+    background-color: rgb(24, 255, 55);
+    width: 100%;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: rgb(48, 182, 66);
+    transition: all 0.3s ease 0s;
+}
+
+p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.register, 
+.login{
+    text-decoration: none;
+    color: #fff;
+}
+
+.register:hover{
+    text-decoration: underline;
+}
+
+.login:hover{
+    text-decoration: underline;
+}

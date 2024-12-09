@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="confirm.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.jpg">
+    <title>Confirm | Cinemaplex Booking</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="confirm-form" action="confirm.php" method="post">
+            <h2>Confirm your booking!</h2>
+            <div id="1">
+                <label for="movie">Movie</label>
+                <input type="text" id="movie_name" name="movie_name" required readonly>
+            </div>
+
+            <div id="2">
+                <label for="date">Date</label>
+                <input type="text" id="date" name="date" required readonly>
+            </div>
+
+            <div id="3">
+                <label for="time">Time</label>
+                <input type="text" id="time" name="time" required readonly>
+            </div>
+
+            <div id="4">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required readonly>
+            </div>
+
+            <div id="5">
+                <label for="no_seats">No. seats</label>
+                <input type="number" id="no_seats" name="no_seats" required readonly>
+            </div>
+
+            <div id="6">
+                <label for="seat_numbers">Seat numbers</label>
+                <input type="text" id="seat_numbers" name="seat_numbers" required readonly>
+            </div>
+
+            <div id="7">
+                <label for="total">Total</label>
+                <input type="number" id="total" name="total" required readonly>
+            </div>
+
+            <div id="8">
+                <button type="submit" name="submit">Confirm</button>
+            </div>
+        </form>
+        <script src="confirm.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+/*navbar start*/
+
+.logo {
+    margin: 2rem;
+    margin-left: 3rem;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.primary-header {
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.primary-header.scrolled {
+    background-color: #333;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    background: hsl(0, 0%, 100% / 0.5);
+}
+
+
+.nav-links:hover {
+    cursor: pointer;
+    color: rgba(24, 255, 55);
+}
+
+.nav-links {
+    transition: all 0.3s ease 0s;
+    margin: 0.5rem;
+}
+
+/* .nav-links::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    height: 2px;
+    background-color: rgb(24, 255, 55);
+    transition: right 0.3s ease;
+}
+
+.nav-links:hover::before {
+    right: 0;
+} */
+
+@supports(backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: hsl(0, 0%, 100% / 0.1);
+        backdrop-filter: blur(1rem);
+    }
+}
+
+@media(min-width: 38em) {
+    .primary-navigation {
+        backdrop-filter: blur(0rem);
+    }
+}
+
+.primary-navigation a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media(max-width: 38em) {
+    .primary-navigation {
+        --gap: 2em;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        transform: translateX(100%);
+        transition: transform 350ms ease-in;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        align-items: center;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url('images/bars-solid.svg');
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: 0;
+        aspect-ratio: 1;
+        right: 2rem;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(images/xmark-solid.svg);
+    }
+}
+
+.login-btn {
+    padding: 0.25em 2rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(24, 255, 55, 1);
+    color: #000;
+
+}
+
+.login-btn:hover {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    background-color: rgba(24, 255, 55, 0.6);
+}
+
+/*navbar ending*/
+
+
+.background-image img {
+    object-fit: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+}
+
+.content{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    padding: 0 4rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.poster img{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 40rem;
+}
+
+.movie-details{
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 18rem;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.details h1{
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.details h2{
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.details p{
+    font-size: 18px;
+    padding-bottom: 0.75rem;
+}
+
+.buy-tickets{
+    font-size: 17px;
+    margin-top: 1.5rem;
+    padding: 0.25em 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 34, 126, 0.795);
+    color: white;
+}
+
+.buy-tickets:hover{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    background-color: rgba(29, 78, 211, 0.795);
+}
+
+.members{
+    /* margin-right: 20rem; */
+    margin-top: 0.5rem;
+
+}
+
+.cast{
+    margin-bottom: 2rem;
+}
+
+.cast h2{
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.actor{
+    font-weight: bold;
+}
+
+.character{
+    font-weight: lighter;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.crew h2{
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.crew div{
+    display: flex;
+}
+
+.title{
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.name{
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    background-color: #333;
+    margin-top: auto;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    padding-top: 2rem;
+    /* padding-bottom: 0.5rem; */
+    justify-content: space-between;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.footer-col ul{
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-col ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-col ul li a:hover{
+    cursor: pointer;
+    color: rgb(24, 255, 55);
+}
+
+ul li {
+    margin: 1rem;
+}
+
+.footer-btn{
+    padding: 0.15em 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(24, 255, 55);
+    color: #000;
+    font-size: 12px;
+}
+
+.footer-btn:hover{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    background-color: rgb(103, 218, 119);
+}
+
+.footer-col h5{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    color: #000;
+    background-color: rgba(24, 255, 55, 1);
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.3s;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+}
+
+.links a:hover{
+    color: rgba(24, 255, 55, 0.6);
+    background-color: #000;
+}
+
+.footer-container p{
+    color: #fff;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* footer */

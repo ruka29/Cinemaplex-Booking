@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movies | Reserve Cinema</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.jpg">
+    <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+    <form action="add_movies.php" method="POST" enctype="multipart/form-data" class="add_movies_form">
+        <h1>Add Movies</h1>
+        <div class="form-container">
+            <div>
+                <label for="movie_name">Movie name</label>
+                <input type="text" name="movie_name" required>
+                <label for="ticket_price">Ticket price</label>
+                <input type="number" name="ticket_price" required>
+                <label for="trailer_link">Trailer link</label>
+                <input type="text" name="trailer_link" required>
+                <label for="showtime_id">Showtime Id</label>
+                <input type="number" name="showtime_id" required>
+                <label for="poster">Upload Poster:</label>
+                <input type="file" name="poster" id="poster">
+                <label for="image">Upload Landscape Image:</label>
+                <input type="file" name="landscape_img" id="landscape_img">
+            </div>
+            <div>
+                <label for="genres">Genres</label>
+                <input type="text" name="genres" required>
+                <label for="duration">Duration</label>
+                <input type="text" name="duration" required>
+                <label for="director">Director</label>
+                <input type="text" name="director" required>
+                <label for="producer">Producer</label>
+                <input type="text" name="producer" required>
+                <label for="writer">Wirter</label>
+                <input type="text" name="writer" required>
+            </div>
+            <div>
+                <label for="actor1">Actor 1</label>
+                <input type="text" name="actor1" required>
+                <label for="character">Character</label>
+                <input type="text" name="actor1_character" required>
+                <label for="actor2">Actor 2</label>
+                <input type="text" name="actor2" required>
+                <label for="character">Character</label>
+                <input type="text" name="actor2_character" required>
+                <label for="actor3">Actor 3</label>
+                <input type="text" name="actor3" required>
+                <label for="character">Character</label>
+                <input type="text" name="actor3_character" required>
+            </div>
+        </div>
+        <input type="submit" value="Add" name="submit">
+    </form>
+</body>
+
+</html>
